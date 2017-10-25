@@ -4,24 +4,24 @@
 # StoryboardBuilder
 ## How ot use
 
-1. Import StoryboardBuilder_iOS
-2. View controller class extends `StoryboardBuilderProtocol`.
+1. Project import StoryboardBuilder_iOS
+2. Your custom view controller extends `StoryboardBuilderProtocol`.
 3. `storyboardName` and `storyboardID` is implemented in that view controller.
 ```swift
 import UIKit
 import Foundation
 import StoryboardBuilder_iOS
 
-class ViewController: UIViewController, StoryboardBuilderProtocol {
+class CustomViewController: UIViewController, StoryboardBuilderProtocol {
     static var storyboardName: String = "Main"
-    static var storyboardID: String = "ViewController"
+    static var storyboardID: String = "CustomViewController"
     ...
 }
 ```
 
 You can use such as following.
 ```swift
-let viewController: ViewController = StoryboardBuilder<ViewController>.generate()
+let customViewController: CustomViewController = StoryboardBuilder<CustomViewController>.generate()
 ```
 
 ## Carthage
