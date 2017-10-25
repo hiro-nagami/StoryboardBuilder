@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-protocol StoryboardBuilderProtocol {
+public protocol StoryboardBuilderProtocol {
     static var storyboardName: String { get }
     static var storyboardID: String { get }
 }
 
-struct StoryboardBuilder<T: StoryboardBuilderProtocol> {
-    static func generate() -> T {
+public struct StoryboardBuilder<T: StoryboardBuilderProtocol> {
+    public static func generate() -> T {
         return UIStoryboard(name: T.storyboardName, bundle: nil).instantiateViewController(withIdentifier: T.storyboardID) as! T
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StoryboardBuilder_iOS
 
 class ViewController: UIViewController, StoryboardBuilderProtocol {
     static var storyboardName: String = "Main"

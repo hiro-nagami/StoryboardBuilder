@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StoryboardBuilder_iOS
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
