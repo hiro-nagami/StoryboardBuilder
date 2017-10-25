@@ -2,7 +2,7 @@
 [![Twitter](https://img.shields.io/badge/twitter-@nagami_hiro-blue.svg?style=flat)](https://twitter.com/nagami_hiro)
 
 # StoryboardBuilder
-### How ot use
+## How ot use
 
 1. Import StoryboardBuilder_iOS
 2. View controller class extends to `StoryboardBuilderProtocol`.
@@ -22,6 +22,12 @@ class ViewController: UIViewController, StoryboardBuilderProtocol {
 You can use such as following.
 ```swift
 let viewController: ViewController = StoryboardBuilder<ViewController>.generate()
+```
+
+## Carthage
+Add following.
+```
+github "hiro-nagami/StoryboardBuilder"
 ```
 
 ## License
