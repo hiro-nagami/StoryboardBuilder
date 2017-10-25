@@ -5,7 +5,7 @@
 ## How ot use
 
 1. Import StoryboardBuilder_iOS
-2. View controller class extends to `StoryboardBuilderProtocol`.
+2. View controller class extends `StoryboardBuilderProtocol`.
 3. `storyboardName` and `storyboardID` is implemented in that view controller.
 ```swift
 import UIKit
