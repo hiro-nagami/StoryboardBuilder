@@ -20,6 +20,10 @@ class ViewController: UIViewController, StoryboardBuilderProtocol {
 ```
 
 You can use such as following.
-```
+```swift
 let viewController: ViewController = StoryboardBuilder<ViewController>.generate()
 ```
+
+## License
+
+StoryboardBuilder is released under the MIT license. [See LICENSE](https://github.com/hiro-nagami/StoryboardBuilder/blob/master/LICENSE) for details.
