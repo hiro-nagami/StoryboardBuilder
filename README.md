@@ -43,7 +43,7 @@ import UIKit
 import Foundation
 import StoryboardBuilder_iOS
 
-class SampleView: UIView, XibBuilder {
+class SampleView: UIView, XibBuilderProtocol {
     static var xibName: String = "SampleView"
     ...
 }
