@@ -3,10 +3,13 @@
 
 # StoryboardBuilder
 ## How ot use
-
+### StoryboardBuilder
 1. Project import StoryboardBuilder_iOS
-2. Your custom view controller extends `StoryboardBuilderProtocol`.
-3. `storyboardName` and `storyboardID` is implemented in that view controller.
+2. Make storyboard file and define ViewController.
+![storyboard](https://raw.githubusercontent.com/hiro-nagami/resource-repo/master/StoryboardBuilder/storyboard.png)
+
+3. Your custom view controller extends `StoryboardBuilderProtocol`.
+4. `storyboardName` and `storyboardID` are implemented in the view controller.
 ```swift
 import UIKit
 import Foundation
@@ -22,6 +25,29 @@ class CustomViewController: UIViewController, StoryboardBuilderProtocol {
 You can use such as following.
 ```swift
 let customViewController: CustomViewController = StoryboardBuilder<CustomViewController>.generate()
+```
+
+### XibBuilder
+1. Project import StoryboardBuilder_iOS
+2. Make xib file and define View.
+![storyboard](https://raw.githubusercontent.com/hiro-nagami/resource-repo/master/StoryboardBuilder/xib.png)
+
+3. Your custom view extends `XibBuilderProtocol`.
+4. `xibName` is implemented in the view.
+```swift
+import UIKit
+import Foundation
+import StoryboardBuilder_iOS
+
+class SampleView: UIView, XibBuilder {
+    static var xibName: String = "SampleView"
+    ...
+}
+```
+
+You can use such as following.
+```swift
+let sampleView: SampleView = XibBuilder<SampleView>.generate()
 ```
 
 ## Carthage
