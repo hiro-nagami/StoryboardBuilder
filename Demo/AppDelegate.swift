@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 
         let navigationVC = self.window?.rootViewController as! UINavigationController
-        let rootVC = StoryboardBuilder<ViewController>.generate()
+        let rootVC = StoryboardBuilder<CustomViewController>.generate()
         navigationVC.setViewControllers([rootVC], animated: false)
 
         return true

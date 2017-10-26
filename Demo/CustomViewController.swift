@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CustomViewController.swift
 //  StoryboardBuilder
 //
 //  Created by Hiromasa Nagamine on 10/25/17.
@@ -9,9 +9,9 @@
 import UIKit
 import StoryboardBuilder_iOS
 
-class ViewController: UIViewController, StoryboardBuilderProtocol {
+class CustomViewController: UIViewController, StoryboardBuilderProtocol {
     static var storyboardName: String = "Main"
-    static var storyboardID: String = String(describing: ViewController.self)
+    static var storyboardID: String = String(describing: CustomViewController.self)
 
     override func viewDidLoad() {
         super.viewDidLoad()
