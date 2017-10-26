@@ -8,7 +8,7 @@
 1. Project import StoryboardBuilder_iOS
 2. Make storyboard file and define ViewController.
 
-![storyboard](https://raw.githubusercontent.com/hiro-nagami/resource-repo/master/StoryboardBuilder/storyboard.png)
+<img src=https://raw.githubusercontent.com/hiro-nagami/resource-repo/master/StoryboardBuilder/storyboard.png alt=storyboard width=600px />
 
 3. Your custom view controller extends `StoryboardBuilderProtocol`.
 4. `storyboardName` and `storyboardID` are implemented in the view controller.
@@ -34,7 +34,7 @@ let customViewController: CustomViewController = StoryboardBuilder<CustomViewCon
 1. Project import StoryboardBuilder_iOS
 2. Make xib file and define View.
 
-![storyboard](https://raw.githubusercontent.com/hiro-nagami/resource-repo/master/StoryboardBuilder/xib.png)
+<img src=https://raw.githubusercontent.com/hiro-nagami/resource-repo/master/StoryboardBuilder/xib.png alt=xib width=600px />
 
 3. Your custom view extends `XibBuilderProtocol`.
 4. `xibName` is implemented in the view.
