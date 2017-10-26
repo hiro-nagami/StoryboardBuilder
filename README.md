@@ -4,8 +4,10 @@
 # StoryboardBuilder
 ## How ot use
 ### StoryboardBuilder
+
 1. Project import StoryboardBuilder_iOS
 2. Make storyboard file and define ViewController.
+
 ![storyboard](https://raw.githubusercontent.com/hiro-nagami/resource-repo/master/StoryboardBuilder/storyboard.png)
 
 3. Your custom view controller extends `StoryboardBuilderProtocol`.
@@ -28,8 +30,10 @@ let customViewController: CustomViewController = StoryboardBuilder<CustomViewCon
 ```
 
 ### XibBuilder
+
 1. Project import StoryboardBuilder_iOS
 2. Make xib file and define View.
+
 ![storyboard](https://raw.githubusercontent.com/hiro-nagami/resource-repo/master/StoryboardBuilder/xib.png)
 
 3. Your custom view extends `XibBuilderProtocol`.
