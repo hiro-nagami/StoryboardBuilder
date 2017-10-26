@@ -15,6 +15,10 @@ class ViewController: UIViewController, StoryboardBuilderProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let view = XibBuilder<SampleView>.generate()
+        view.center = self.view.center
+        self.view.addSubview(view)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
