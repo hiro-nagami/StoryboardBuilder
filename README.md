@@ -2,6 +2,7 @@
 [![Twitter](https://img.shields.io/badge/twitter-@nagami_hiro-blue.svg?style=flat)](https://twitter.com/nagami_hiro)
 
 # StoryboardBuilder
+Simple dependency injection for generating views from storyboard.
 ## How ot use
 ### StoryboardBuilder
 
