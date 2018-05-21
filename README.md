@@ -1,10 +1,21 @@
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)
-[![Twitter](https://img.shields.io/badge/twitter-@nagami_hiro-blue.svg?style=flat)](https://twitter.com/nagami_hiro)
+
 
 # StoryboardBuilder
 Simple dependency injection for generating views from storyboard.
-## How ot use
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)
+
+## Description
+Storyboard can help generating that View and ViewController are defineded in Storyboard and Xib. You can generate instance and parse type of one by using `StoryboardBuilderProtocol` and `StoryboardBuilder`;
+
+## Install
+### Carthage
+Add following.
+```
+github "hiro-nagami/StoryboardBuilder"
+```
+
+## Usage
 ### StoryboardBuilder
 
 1. Project import StoryboardBuilder_iOS
@@ -56,12 +67,9 @@ You can use such as following.
 let sampleView: SampleView = XibBuilder<SampleView>.generate()
 ```
 
-## Carthage
-Add following.
-```
-github "hiro-nagami/StoryboardBuilder"
-```
-
 ## License
 
 StoryboardBuilder is released under the MIT license. [See LICENSE](https://github.com/hiro-nagami/StoryboardBuilder/blob/master/LICENSE) for details.
+
+## Author
+[@hiro_nagami](https://twitter.com/nagami_hiro)
