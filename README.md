@@ -6,7 +6,7 @@ Simple dependency injection for generating views from storyboard.
 ![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)
 
 ## Description
-`StoryboardBuilder` is framework to help generating that View and ViewController are defineded in Storyboard and Xib. You can generate instance and parse type of one by using `StoryboardBuilderProtocol` and `XibBuilderProtocol` description.
+`StoryboardBuilder` is framework to help simply and easily generating that View and ViewController are defineded in Storyboard and Xib. You can generate instance and parse type of one by using `StoryboardBuilderProtocol` and `XibBuilderProtocol` description.
 
 ## Install
 ### Carthage
