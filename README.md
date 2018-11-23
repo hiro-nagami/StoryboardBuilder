@@ -1,13 +1,31 @@
+
+# StoryboardBuilder
+Simple dependency injection for generating views from storyboard.
+
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Twitter](https://img.shields.io/badge/twitter-@nagami_hiro-blue.svg?style=flat)](https://twitter.com/nagami_hiro)
+![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)
+
+## Description
+`StoryboardBuilder` is framework to help simply and easily generating that View and ViewController are defineded in Storyboard and Xib. You can generate instance and parse type of one by using `StoryboardBuilderProtocol` and `XibBuilderProtocol` description.
+
+## Install
+### Carthage
+Add following.
+```
+github "hiro-nagami/StoryboardBuilder"
+```
 
 # How ot use
 ## StoryboardBuilder
 
 1. Create storyboard file in your project.
+
+<img src=https://raw.githubusercontent.com/hiro-nagami/resource-repo/master/StoryboardBuilder/storyboard.png alt=storyboard width=600px />
+
 2. Import StoryboardBuilder_iOS.
 3. Your custom view controller extends `StoryboardBuilderProtocol`.
 4. `storyboardName` and `storyboardID` are implemented in that view controller.
+
 ```swift
 import UIKit
 import Foundation
@@ -33,9 +51,13 @@ let customViewController: CustomViewController = StoryboardBuilder<CustomViewCon
 ## XibBuilder
 
 1. Create xib file in your project.
+
+<img src=https://raw.githubusercontent.com/hiro-nagami/resource-repo/master/StoryboardBuilder/xib.png alt=xib width=600px />
+
 2. Import StoryboardBuilder_iOS.
 3. Your custom view controller extends `XibBuilderProtocol`.
 4. `xibName`is implemented in that view controller.
+
 ```swift
 import UIKit
 import Foundation
@@ -50,7 +72,7 @@ class CustomView: UIView, XibBuilderProtocol {
 You can use such as following.
 ```swift
 
-let customViewController: CustomView = XibBuilder<CustomView>.generate()
+let customView: CustomView = XibBuilder<CustomView>.generate()
 
 /* You can generate CustomView just like following.
    let identifier = "CustomView"
@@ -89,13 +111,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
 }
 ```
 
-## Carthage
-Add following.
-```
-github "hiro-nagami/StoryboardBuilder"
-```
-
 ## License
 StoryboardBuilder is released under the MIT license. [See LICENSE](https://github.com/hiro-nagami/StoryboardBuilder/blob/master/LICENSE) for details.
 
-Twitter: @nagami_hiro
+## Author
+[@hiro_nagami](https://twitter.com/nagami_hiro)
