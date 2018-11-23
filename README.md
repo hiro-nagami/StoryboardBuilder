@@ -84,8 +84,8 @@ let customView: CustomView = XibBuilder<CustomView>.generate()
 
 You can register and use CustomTableViewCell.
 
-```
-class CustomView: UITableViewCell, XibBuilderProtocol {
+```swift
+class CustomViewCell: UITableViewCell, XibBuilderProtocol {
     static var xibName: String = "CustomView"
     ...
 }
@@ -98,11 +98,11 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.sb.register(clazz: CustomView.self)
+        self.tableView.sb.register(clazz: CustomViewCell.self)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.sb.dequeueReusableCell(clazz: SampleTableViewCell.self)
+        let cell = tableView.sb.dequeueReusableCell(clazz: CustomViewCell.self)
 
         ...
         
