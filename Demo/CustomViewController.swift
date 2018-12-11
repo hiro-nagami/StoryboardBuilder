@@ -18,12 +18,18 @@ class CustomViewController: UIViewController, StoryboardBuilderProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let view = XibBuilder<SampleView>.generate()
+        let view = SampleView.getModule()
         view.frame.origin = .zero
         self.view.addSubview(view)
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.sb.register(clazz: SampleTableViewCell.self)
+        self.tableView.sb.register(cellClass: SampleTableViewCell.self)
+
+        self.tableView.sb.register(cellClasses: [
+            SampleTableViewCell.self,
+            SampleTableViewCell.self,
+            SampleTableViewCell.self
+        ])
     }
 
     override func didReceiveMemoryWarning() {

@@ -14,8 +14,32 @@ public protocol StoryboardBuilderProtocol {
     static var storyboardID: String { get }
 }
 
-public struct StoryboardBuilder<T: StoryboardBuilderProtocol> {
-    public static func generate() -> T {
-        return UIStoryboard(name: T.storyboardName, bundle: nil).instantiateViewController(withIdentifier: T.storyboardID) as! T
+extension StoryboardBuilderProtocol {
+    public static func getModule() -> Self {
+        let storyboard = UIStoryboard(name: Self.storyboardName, bundle: nil)
+        guard let module = storyboard.instantiateViewController(withIdentifier: Self.storyboardID) as? Self else {
+            fatalError("Cannot find module has storyboardName \(Self.storyboardName) and storyboardID \(Self.storyboardID)")
+        }
+
+        return module
     }
 }
+
+public final class StoryboardBuilderExtension<Base> {
+    public let base: Base
+    public init(_ base: Base) {
+        self.base = base
+    }
+}
+
+public protocol StoryboardBuilderCompatible {
+    associatedtype CompatibleType
+    var sb: CompatibleType { get }
+}
+
+public extension StoryboardBuilderCompatible {
+    public var sb: StoryboardBuilderExtension<Self> {
+        return StoryboardBuilderExtension(self)
+    }
+}
+

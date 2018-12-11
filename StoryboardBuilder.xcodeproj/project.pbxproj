@@ -23,6 +23,7 @@
 		E88961071FA2376D00D0FA0C /* XibBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88961051FA2366D00D0FA0C /* XibBuilder.swift */; };
 		E88961091FA2378F00D0FA0C /* SampleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E88961081FA2378F00D0FA0C /* SampleView.xib */; };
 		E889610B1FA237D300D0FA0C /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E889610A1FA237D300D0FA0C /* SampleView.swift */; };
+		E8A033E921BF8618009F0AFA /* XibBuilder+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A033E721BF8537009F0AFA /* XibBuilder+UITableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		E88961051FA2366D00D0FA0C /* XibBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibBuilder.swift; sourceTree = "<group>"; };
 		E88961081FA2378F00D0FA0C /* SampleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleView.xib; sourceTree = "<group>"; };
 		E889610A1FA237D300D0FA0C /* SampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
+		E8A033E721BF8537009F0AFA /* XibBuilder+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XibBuilder+UITableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 		3F4F4E691FA0194A00600B0E /* StoryboardBuilder */ = {
 			isa = PBXGroup;
 			children = (
+				E8A033E621BF851A009F0AFA /* Extensions */,
 				3F4F4E761FA0194A00600B0E /* Info.plist */,
 				3F4F4E981FA01AEE00600B0E /* StoryboardBuilder.swift */,
 				E88961051FA2366D00D0FA0C /* XibBuilder.swift */,
@@ -195,6 +198,14 @@
 				3F4F4E8C1FA0194A00600B0E /* Info.plist */,
 			);
 			path = StoryboardBuilderUITests;
+			sourceTree = "<group>";
+		};
+		E8A033E621BF851A009F0AFA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E8A033E721BF8537009F0AFA /* XibBuilder+UITableView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8A033E921BF8618009F0AFA /* XibBuilder+UITableView.swift in Sources */,
 				3F1A85F31FA02EB300810CD0 /* StoryboardBuilder.swift in Sources */,
 				E88961071FA2376D00D0FA0C /* XibBuilder.swift in Sources */,
 			);
@@ -611,7 +623,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WYCW6C5ZZ9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = StoryboardBuilder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -628,7 +640,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WYCW6C5ZZ9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = StoryboardBuilder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
