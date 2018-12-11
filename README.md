@@ -3,7 +3,7 @@
 Simple dependency injection for generating views from storyboard.
 
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)
+![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)
 
 ## Description
 `StoryboardBuilder` is framework to help simply and easily generating that View and ViewController are defineded in Storyboard and Xib. You can generate instance and parse type of one by using `StoryboardBuilderProtocol` and `XibBuilderProtocol` description.
@@ -16,7 +16,7 @@ github "hiro-nagami/StoryboardBuilder"
 ```
 
 # How ot use
-## StoryboardBuilder
+## Way to get Storyboard Class
 
 1. Create storyboard file in your project.
 
@@ -40,15 +40,15 @@ class CustomViewController: UIViewController, StoryboardBuilderProtocol {
 
 You can use such as following.
 ```swift
-let customViewController: CustomViewController = StoryboardBuilder<CustomViewController>.generate()
-
 /* You can generate CustomViewController just like following.
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let customeVC = storyboard.instantiateViewController(withIdentifier: "CustomViewController") as! CustomViewController
 **/
+
+let customViewController = CustomViewController.getModule()
 ```
 
-## XibBuilder
+## Way to get Xib Class
 
 1. Create xib file in your project.
 
@@ -71,15 +71,13 @@ class CustomView: UIView, XibBuilderProtocol {
 
 You can use such as following.
 ```swift
-
-let customView: CustomView = XibBuilder<CustomView>.generate()
-
 /* You can generate CustomView just like following.
    let identifier = "CustomView"
    let customViewNib = UINib(nibName: identifier, bundle: nil)
    let customView = customViewNib.instantiate(withOwner: self, options: nil).first as! CustomView
 **/
 
+let customView: CustomView = CustomView.getModule()
 ```
 
 You can register and use CustomTableViewCell.
@@ -98,11 +96,16 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.sb.register(clazz: CustomViewCell.self)
+        self.tableView.sb.register(cellClass: CustomViewCell.self)
+        self.tableView.sb.register(cellClasses: [
+            CustomViewACell.self,
+            CustomViewBCell.self,
+            CustomViewCCell.self,
+        ])
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.sb.dequeueReusableCell(clazz: CustomViewCell.self)
+        let cell = tableView.sb.dequeueReusableCell(cellClass: CustomViewBCell.self)
 
         ...
         
