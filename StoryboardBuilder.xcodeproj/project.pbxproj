@@ -23,6 +23,7 @@
 		E88961071FA2376D00D0FA0C /* XibBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88961051FA2366D00D0FA0C /* XibBuilder.swift */; };
 		E88961091FA2378F00D0FA0C /* SampleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E88961081FA2378F00D0FA0C /* SampleView.xib */; };
 		E889610B1FA237D300D0FA0C /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E889610A1FA237D300D0FA0C /* SampleView.swift */; };
+		E88D7F1D21ED049600D0D3B4 /* XibBuilder+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D7F1B21ED047000D0D3B4 /* XibBuilder+UICollectionView.swift */; };
 		E8A033E921BF8618009F0AFA /* XibBuilder+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A033E721BF8537009F0AFA /* XibBuilder+UITableView.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		E88961051FA2366D00D0FA0C /* XibBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibBuilder.swift; sourceTree = "<group>"; };
 		E88961081FA2378F00D0FA0C /* SampleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleView.xib; sourceTree = "<group>"; };
 		E889610A1FA237D300D0FA0C /* SampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
+		E88D7F1B21ED047000D0D3B4 /* XibBuilder+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XibBuilder+UICollectionView.swift"; sourceTree = "<group>"; };
 		E8A033E721BF8537009F0AFA /* XibBuilder+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XibBuilder+UITableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				E8A033E721BF8537009F0AFA /* XibBuilder+UITableView.swift */,
+				E88D7F1B21ED047000D0D3B4 /* XibBuilder+UICollectionView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 			files = (
 				E8A033E921BF8618009F0AFA /* XibBuilder+UITableView.swift in Sources */,
 				3F1A85F31FA02EB300810CD0 /* StoryboardBuilder.swift in Sources */,
+				E88D7F1D21ED049600D0D3B4 /* XibBuilder+UICollectionView.swift in Sources */,
 				E88961071FA2376D00D0FA0C /* XibBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
